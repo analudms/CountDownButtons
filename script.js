@@ -15,6 +15,7 @@ let isPaused = false;
 buttonStart.addEventListener("click", startTimer)
 buttonStop.addEventListener("click", pauseTimer)
 buttonResume.addEventListener("click", resumeTimer)
+buttonReset.addEventListener("click", resetTimer)
 
 function startTimer() {
     interval = setInterval(() => {
@@ -55,3 +56,18 @@ function resumeTimer(){
     isPaused = false;
 }
 
+function resetTimer(){
+    clearInterval(interval)
+    minutes = 0;
+    seconds = 0;
+    milliseconds = 0;
+
+    minutesEl.textContent = "00";
+    secondsEl.textContent = "00";
+    millisecondsEl.textContent = "000";
+
+    isPaused = false; 
+
+
+
+}
