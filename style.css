@@ -37,6 +37,11 @@ body {
     text-align: center;
 }
 
+.buttonStop
+.buttonResume {
+    display: none;
+}
+
 button {
     padding: 15px;
     cursor: pointer;
